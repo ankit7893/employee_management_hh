@@ -1,0 +1,519 @@
+
+# dictionary >>>  
+
+# keys()    ##     
+# values()  ### 
+# items()   ## 
+# pop()     ##   
+# popitem() ## 
+# clear()  ## 
+# del       ### 
+# get()     #### 
+# dict()    ### 
+# len()      #### 
+#  
+
+
+######################################################
+# mutable     >>> list , set ,  dict 
+# immutable  >>>> tuple  , string  , int , boolean , float , 
+##################################
+# dictionarry >
+# -- it will have key  , value system and pair of that will be called as item 
+# -- key should be immutable 
+# -- it will be inclosed in {} || empty dict >> {}
+# -- key can not be repeated 
+# -- mutable 
+
+
+# student = { "name" : "vatsal" ,
+#             'age' :23,
+#             'name':"vishnu",
+#             "name2":"vishnu"
+#             }  
+
+# # print((student))    
+# print(len(student))    
+
+
+
+
+##########################################
+# how to access values in dict 
+
+
+# student = { "name" : "vatsal" ,
+#             'age' :23,
+#             "name" : "rahul"
+#             }  
+
+# # print(student["name"])  
+
+# print(student.get("nameeeeeee"))
+
+############################################
+#how to add new item in dict 
+
+# student = { "name" : "vatsal" ,
+#             'age' :23,
+#             'add' :"india"
+#             }  
+
+# student["add"] = "usa"
+# print(student)
+#################################################
+
+# student = {
+#     "name" : "rahul",
+#     "age" : 23, 
+#     "add" : "delhi", 
+#     "sal" : 30000
+
+# }
+
+# for i in student:
+# for i in student.keys():
+# for i in student.values():
+# for i in student.items():
+    # print(i)  
+
+
+
+# for k,v in student.items():  # ("name" , "rahul")
+#     print(k , v)  
+
+
+######################################################
+
+# student = {
+#     "name" : "rahul",
+#     "age" : 23, 
+#     "add" : "delhi", 
+#     "sal" : 30000
+# }
+
+# if "Name" in student:
+#     print("yes")
+
+# else:
+#     print("no")
+
+
+########################################################
+
+# student = {
+#     "name" : "rahul",
+#     "age" : 23, 
+#     "add" : "delhi",  
+#     "sal" : 30000
+# }
+# print(student.pop("name"))         ###  
+# print(student)
+
+
+# student = {
+#     "name" : "rahul",
+#     "age" : 23, 
+#     "add" : "delhi",  
+#     "sal" : 30000
+# }
+# student.popitem()        ###  
+# print(student)
+
+
+
+
+
+# student = {
+#     "name" : "rahul",
+#     "age" : 23, 
+#     "add" : "delhi",  
+#     "sal" : 30000
+# }
+# del student["add"]
+# # del student 
+# print(student)  
+
+
+# type casting
+# data  = [("name"  ,  "rahul") , ("age", )]
+# d= dict(data)
+
+# print(d)
+
+########################################################################
+########################################################################
+########################################################################
+########################################################################
+########################################################################
+
+# file handling of text
+
+# modes
+# r        --  read 
+# file exits     --   you can read 
+# file not exits --     error
+
+# w    -- write 
+# file exits     --    (blank file) (prev data removed)
+# file not exits --    (blank file ) create new file 
+
+# a   --  append 
+# file exits     --    (prev data will remain )
+# file not exits --    (blank file ) create new file 
+
+# x   -- new file 
+# file exits     --    error
+# file not exits --    (blank file ) create new file
+
+# r+  --  read and write 
+# file exits     --      (prev data will remain )  (read and write)
+# file not exits --      error
+
+# w+    --  write and read 
+# file exits     --     (blank file)  (write and read)
+# file not exits --      (blank file ) create new file 
+
+
+#########################################################
+
+# f= open("1.txt","r")  
+# print(f.read())
+# f.close() 
+
+
+
+# with open("1.txt")  as f:
+    # print(f.read()) 
+
+
+#################################################
+
+
+# f= open("1213454t45654.txt","r")  
+# print(f.read())
+# f.close() 
+
+
+
+##########################
+
+
+# f= open("1324567.txt","w")  
+# f.write("new data i am adding ")
+
+
+##################################
+# read ,  readline  , readlines
+
+# f= open("1.txt","r")  
+# print(f.read())   ##    whole data 
+# print(f.read(3))   ###  nothing
+# print(f.read(3))   ###  nothing
+# f.close() 
+
+# ##################################################
+
+# # readline 
+# f= open("1.txt","r")  
+# print(f.readline(6))   ##  we are
+# print(f.readline())   ##  here 
+# print(f.readline())   ##   and we are learing python
+
+# f.close() 
+
+# # 
+
+
+# f=open("1.txt")
+# print(f.readlines(3))  ## 
+# print(f.readlines())  # []
+
+
+#####################################################
+# count number of lines in file 
+
+# f= open("1.txt")
+# d= f.readlines() 
+# print(len(d))
+
+
+# f= open("1.txt")
+# c=0 
+# for line in f:
+#     # print(line)
+#     c=c+1
+
+# print(c)
+
+
+
+############################################# 
+# count number of words in file 
+
+# f= open("1.txt") 
+# l = f.read().split() 
+# print(len(l)) 
+
+
+
+
+
+
+
+
+
+
+# count number of char  in file 
+
+# f= open("1.txt")
+# c=0 
+# for line in f:  ##  10 
+#     for char in line:  #  20*10 = 200 
+#         # print(char)
+#         c=c+1           #   c= 0+1 =1 
+# print(c)  
+
+
+
+
+
+##############################################
+##############################################
+##############################################
+##############################################
+##############################################
+##############################################
+
+# seek  ==  it can move the cursor to certaion position 
+# tell  ==  will tell you current postion of cursor 
+# closed  ==  check if file is closed or not 
+# strip  ==  removes the spaces from left and right of the string
+# trncate -- 
+
+# f= open("1.txt","r")
+# print(f.tell())
+# print(f.read(8))
+# print(f.tell())
+# f.seek(0)
+# print(f.tell())
+
+
+# f= open("1.txt","r")
+# print(f.read()) 
+# f.seek(50)
+# print(f.read()) 
+
+
+
+
+# f= open("1.txt","r")
+# print(f.closed)  # 
+# f.close()
+# print(f.closed)  # 
+
+
+# f= open("1.txt","r")
+# f.close()
+
+# if f.closed:
+#     print("file is closed")
+# else:
+#     print("file is still opened")
+
+ 
+
+# name  = "         rahul                       "
+
+# # print(name)
+# # print(name.strip())
+# print(name.lstrip()+ "hello")
+# # print(name.rstrip() +  "hello")
+
+
+
+############################################################
+
+
+# f= open("1.txt","a")
+# f.truncate(100) 
+
+
+
+# f.write("new data")
+
+
+###################################################
+
+# change the "east" word to "west"
+
+
+# f1= open("1.txt")
+# f2 = open("2.txt","w")
+
+
+# while True:
+#     line  = f1.readline()  #  line = "" 
+#     if not line :
+#         break 
+
+#     if "east" in line:
+#         line  = line.replace("east","west")
+    
+#     f2.write(line)
+    
+# f1.close()
+# f2.close()
+
+
+#################################################################
+# change the "east" word to "west"
+
+
+# f1 = open("1.txt","r+")
+# l= f1.readlines()  ##  l = []
+# up_l=[]
+# for line in l:     ## 
+#     if "east" in line:
+#         line   = line.replace("east","west")
+#     up_l.append(line)
+
+# f1.truncate(0) 
+
+# f1.seek(0) 
+# print(up_l)
+
+# for line in up_l:
+#     f1.write(line)
+
+# f1.close()
+
+
+
+
+##############################################
+
+# f= open("new.txt" ,"x")
+
+##########################################
+# count number of lines 
+# count number of words 
+# count number of char 
+# find longest word in file    ## print(max(l,key=len))
+# find the number of lines starting with t 
+# find the char who is ocuured maxnimum time and tell its count as well 
+# read the last 3 lines of the file 
+# copy the content of 1 file to another file 
+# count the frequency of words  ##  {"is":4 , "the":18 } ...... 
+# convert the data of file in uppercase  ##   line.upper()
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+
+# args ###                 * operator
+# kwargs
+# map 
+# filter 
+# all 
+# any 
+# enumerate
+#################################################################
+
+
+# args ###                 star operator
+# kwargs   ######          double star operator
+# map 
+# filter 
+# all 
+# any 
+# enumerate
+
+
+
+# def fun(*args):
+#     print(args)
+    
+
+# fun()  # 0 
+# fun(1,2,3,4,5,)  # 5 
+# fun(1,2,3,4,5,24,234,2345,234)  # 10
+
+##########################################################
+# WAP that will receive any amount of intergers and you have return thier sum
+
+
+# def fun(*args):
+#     print(type(args))
+#     return sum(args)  
+    
+
+# print(fun())  # 0 
+# print(fun(1,2,3,4,5,) )  # 5 
+# print(fun(1,2,3,4,5,24,234,2345,234))   # 10
+# print(fun(1,2,3,4,5,24,234,2345,234))   # 10
+
+#############################################################
+
+
+# def fun(**kwargs):
+#     print(kwargs)
+
+
+# fun(name= "rahul" , age =  12 )  
+
+
+################################################ 
+
+# def fun(a):  
+#     print("run")
+#     return a**3
+
+
+# l= [1,2,3,4,5]    
+
+# print(list(map(fun, l )))    
+#################################################
+
+
+# def fun(a):  
+#     print("run")
+#     return a%2==1  
+
+# l= [1,2,3,4,5,]     #####  
+
+# print(list(filter(fun, l )))   
+
+
+################################################### 
+
+# Falsy values >> "" , 0 , none  , {}  ,set() , [] , () ,  False
+
+# in all case >>> it is already True , it requires a falsy value to make it False
+
+# print(all(["ankit", 23 , False]))  
+############################################
+
+
+# in any case >>> it is already False , it requires a truthy value to make it True
+
+# print(any([0,False , 34]))
+##############################################
+
+# l= [20,345,23,4,23,234,23,3,3,4,45]
+# for i in enumerate(l):
+#     print(i)
+
+##############################################################
+##############################################################
+##############################################################
+##############################################################
+##############################################################
+
+
+
+
+
+

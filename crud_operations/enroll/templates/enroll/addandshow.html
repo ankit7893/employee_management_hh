@@ -1,0 +1,74 @@
+{% extends 'enroll/base.html' %} 
+
+
+{% block content %}
+
+<h2 class="text-center  text-uppercase alert alert-info">ADD new student </h2>
+
+<div class="row">
+    <div class="col-sm-4">
+
+        <form action="" method="post" autocomplete="off">
+            {% csrf_token %}  
+            <!-- {{form.as_p}}  -->
+            {% for fm in form %}
+                {{fm.label_tag}} {{fm}} {{fm.errors|striptags}}
+            
+            {% endfor %} 
+            <input type="submit" value="submit">
+        </form> 
+    </div>
+
+
+    <div class="col-sm-7 offset-1">
+        <h4 class="text-center text-uppercase alert alert-info">show student information</h4>
+        {% if stu %}   
+        <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th scope="col">id</th>
+                <th scope="col">name</th>
+                <th scope="col">email</th>
+                <th scope="col">password</th>
+                <th scope="col">action</th>
+              </tr>
+            </thead>
+            <tbody>
+                {% for st in stu %} 
+                <tr>
+                  <th scope="row">{{st.id}}</th>
+                  <td>{{st.name}}</td>
+                  <td>{{st.email}}</td>
+                  <td>{{st.password}}</td>
+                  <td> 
+
+
+                      <a href=" {% url 'updatedata' st.id %} " class="btn btn-warning btn-sm"> edit</a>
+
+                      <form action=" {% url 'deletedata' st.id %}  " method="post" class="d-inline">
+                        {% csrf_token %}
+                        <input type="submit" class="btn btn-danger" value="delete">
+                      </form>
+                  </td>
+
+                </tr>
+                {% endfor %}  
+            </tbody>
+          </table>
+        {% else %}
+            <h4 class="text-center alert alert-warning text-uppercase"> we dont have records </h4>
+        {% endif %}
+
+    </div>
+</div>
+
+
+
+
+
+
+
+        
+{% endblock content %}
+
+

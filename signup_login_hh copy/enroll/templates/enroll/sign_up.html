@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .success{
+            color: red;
+        }  
+    </style>
+</head>  
+<body>
+
+    <form action="" method="post" novalidate>
+        {% csrf_token %}
+
+        {% for fm in form %}  
+
+        {{fm.label_tag}}   {{fm}}    {{fm.errors|striptags}}   <br> <br> 
+        
+        {% endfor %}
+        <input type="submit" value="submit">
+    </form>
+
+    {% if messages %} 
+        {% for message in messages %}
+        <small class='success'> {{message}}</small>
+        {% endfor %}
+    
+    {% endif %}
+    
+    <br> 
+
+    <a href="{% url 'user_login' %}"> go to login form page </a>
+    <br> <br>
+    <a href="{% url 'index' %}"> go to index page  </a>
+
+
+    
+</body>
+</html>
+
